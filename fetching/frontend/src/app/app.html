@@ -1,0 +1,25 @@
+<body>
+<h2> Employee List </h2>
+
+<table border="1" style="width: 80%;text-align: center;border-collapse: collapse;padding: 20px;" *ngIf="employees.length > 0" >
+  <thead>
+    <tr style="background-color: #a0f750">
+      <th>Employee ID</th>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td class="hover-expand" (mouseenter)="hovered = emp.id" (mouseleave)="hovered = null"><div class="cell-content">{{ emp.employeeId }}</div>
+      <td>{{ emp.fullName }}</td>
+      <td>{{ emp.email }}</td>
+      <td>{{ emp.phoneNumber }}</td>
+      </tr>
+        
+      
+  </tbody>
+</table>
+</body>
+<router-outlet />

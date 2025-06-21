@@ -1,0 +1,23 @@
+.hover-expand .cell-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+  transition: max-width 0.3s ease;
+  text-align: center;
+}
+
+.hover-expand:hover .cell-content {
+  white-space: normal;
+  max-width: 500px;
+}
+.details {
+  background-color: #99d1eb;
+  padding: 8px;
+  
+  margin-top: 4px;
+  border-radius: 4px;
+}
+tr:hover {
+  background-color: #eef;
+}
