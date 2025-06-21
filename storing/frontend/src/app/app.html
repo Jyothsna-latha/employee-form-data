@@ -1,0 +1,42 @@
+<head>
+
+</head>
+<h1> Employee Form</h1>
+<form id= "f1" name= "employeForm" (ngSubmit)="addUser()">
+  <input type="text" name="employeeId"  [(ngModel)]="employeeId" placeholder="Enter EmployeeId" required>
+  <input type="text" name="fullName"  [(ngModel)]="fullName" placeholder="Enter Full Name" required>
+  <input type="email" name="email" [(ngModel)]="email" placeholder="Enter email" required>
+  <input type="text" name="phoneNumber"  [(ngModel)]="phoneNumber" placeholder="Enter Phone Number" pattern="^((\+91-?)|0)?[0-9]{10}$" required >
+  <button type="submit"> Submit </button>
+</form>
+<!--<h1>Employee Form</h1>
+<form #formRef="ngForm" (ngSubmit)="addUser()" novalidate style="max-width: 400px; margin: auto;">
+  <input name="employeeId" [(ngModel)]="employeeId" placeholder="Enter EmployeeId" required #empId="ngModel" />
+  <div *ngIf="empId.invalid && empId.touched">
+    <small *ngIf="empId.errors?. ['required']">Employee ID is required.</small>
+  </div>
+
+  <input name="fullName" [(ngModel)]="fullName" placeholder="Enter Full Name" required #fullNameRef="ngModel" />
+  <div *ngIf="fullNameRef.invalid && fullNameRef.touched">
+    <small *ngIf="fullNameRef.errors?.['required']">Full Name is required.</small>
+  </div>
+
+  <input type="email" name="email" [(ngModel)]="email" placeholder="Enter email" required #emailRef="ngModel" />
+  <div *ngIf="emailRef.invalid && emailRef.touched">
+    <small *ngIf="emailRef.errors?.['required']">Email is required.</small>
+    <small *ngIf="emailRef.errors?. ['.email']">Invalid email format.</small>
+  </div>
+
+  <input name="phoneNumber" [(ngModel)]="phoneNumber" placeholder="Enter Phone Number"
+         pattern="^((\+91-?)|0)?[0-9]{10}$" required #phoneRef="ngModel" />
+  <div *ngIf="phoneRef.invalid && phoneRef.touched">
+    <small *ngIf="phoneRef.errors?. ['required']">Phone number is required.</small>
+    <small *ngIf="phoneRef.errors?. ['.pattern']">Enter a valid 10-digit number.</small>
+  </div>
+
+  <button type="submit" [disabled]="formRef.invalid">Submit</button>
+</form> -->
+
+
+<router-outlet> </router-outlet> 
+
